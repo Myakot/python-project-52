@@ -1,5 +1,5 @@
 install:
-	poetry install
+	poetry install #render.com doesn't see this for some reason and can't build? REMEMBER TO FIX LATER!!!!!!!!!
 
 lint:
 	poetry run flake8 task_manager
@@ -15,7 +15,7 @@ test-coverage:
 	poetry run coverage xml
 
 build:
-	poetry build
+	./build.sh
 
 selfcheck:
 	poetry check

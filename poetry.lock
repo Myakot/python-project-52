@@ -13,6 +13,24 @@ typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
 tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.12.3"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+cchardet = ["cchardet"]
+chardet = ["chardet"]
+charset-normalizer = ["charset-normalizer"]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -74,6 +92,18 @@ python-versions = "*"
 [package.dependencies]
 django-excel-response2 = ">=3.0.0"
 django-six = "*"
+
+[[package]]
+name = "django-bootstrap4"
+version = "24.3"
+description = "Django extensions by Zostera"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+beautifulsoup4 = ">=4.8.0"
+Django = ">=4.1"
 
 [[package]]
 name = "django-excel-response2"
@@ -283,6 +313,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "soupsieve"
+version = "2.5"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "sqlparse"
 version = "0.5.0"
 description = "A non-validating SQL parser."
@@ -356,15 +394,17 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "db3e80456516c693111d7dcb7272c66145474a5b1d2cd24522671ff1b5b7756e"
+content-hash = "6eff9e77303a649d13561370b881e0364e49704331a17074d8fa5b1ace4d2e7e"
 
 [metadata.files]
 asgiref = []
+beautifulsoup4 = []
 colorama = []
 coverage = []
 dj-database-url = []
 django = []
 django-admin = []
+django-bootstrap4 = []
 django-excel-response2 = []
 django-six = []
 excel-base = []
@@ -384,6 +424,7 @@ python-dateutil = []
 python-dotenv = []
 screen = []
 six = []
+soupsieve = []
 sqlparse = []
 timeconvert = []
 tomli = []

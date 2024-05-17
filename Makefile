@@ -14,9 +14,6 @@ test-coverage:
 	poetry run coverage report
 	poetry run coverage xml
 
-build:
-	./build.sh
-
 selfcheck:
 	poetry check
 

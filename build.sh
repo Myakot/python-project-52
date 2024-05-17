@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-pip install --upgrade pip; pip install poetry && poetry install
+sudo apt update; sudo apt install pipx; pipx ensurepath; pipx install poetry && poetry install

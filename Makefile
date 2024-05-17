@@ -11,6 +11,10 @@ test-coverage:
 	poetry run coverage report
 	poetry run coverage xml
 
+
+build:
+	poetry build
+
 install:
 	poetry install
 

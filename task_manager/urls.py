@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task_manager import views
 
 
-# Don't forget to add views.py file
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),

@@ -1,3 +1,6 @@
+install:
+	poetry install
+
 lint:
 	poetry run flake8 task_manager
 
@@ -11,12 +14,8 @@ test-coverage:
 	poetry run coverage report
 	poetry run coverage xml
 
-
 build:
 	poetry build
-
-install:
-	poetry install
 
 selfcheck:
 	poetry check

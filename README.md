@@ -17,6 +17,7 @@ A flexible task management web application
 
 </div>
 
-The demo version is available on Railway platform:
+### Demonstration
 
-[![Railway](https://railway.app/badge/github/Myakot/python-project-52)](https://railway.app/github/Myakot/python-project-52)
+The production version of the app is (hopefully) available at the following URL:
+[Page analyzer](https://python-project-52-adop.onrender.com)

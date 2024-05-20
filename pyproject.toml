@@ -16,6 +16,8 @@ dj-database-url = "^2.1.0"
 gunicorn = "^22.0.0"
 coverage = "^7.5.1"
 django-bootstrap4 = "^24.3"
+ipython = "^8.24.0"
+django-extensions = "^3.2.3"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^7.0.0"

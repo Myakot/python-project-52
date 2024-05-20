@@ -1,5 +1,5 @@
 install:
-	poetry install #render.com doesn't see this for some reason and can't build? REMEMBER TO FIX LATER!!!!!!!!!
+	poetry install
 
 lint:
 	poetry run flake8 task_manager

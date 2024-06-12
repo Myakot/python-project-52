@@ -30,3 +30,9 @@ migrate:
 
 shell:
 	poetry run python manage.py shell_plus --ipython
+
+compilemessages:
+	django-admin compilemessages
+
+makemessages:
+	 django-admin makemessages --ignore="static" --ignore=".env" -l en

@@ -5,7 +5,7 @@ from django.utils.translation import gettext as _
 from .models import User
 
 
-class UserRegistrationForm(UserCreationForm):
+class UserForm(UserCreationForm):
 
     first_name = forms.CharField(
         max_length=150, required=True, label=_("First name"), help_text=_("Help text")

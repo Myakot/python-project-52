@@ -17,7 +17,8 @@ test-coverage:
 selfcheck:
 	poetry check
 
-check: selfcheck test test-coverage lint
+check:
+	selfcheck test-coverage lint
 
 dev:
 	poetry run python manage.py runserver
@@ -35,4 +36,4 @@ compilemessages:
 	django-admin compilemessages
 
 makemessages:
-	 django-admin makemessages --ignore="static" --ignore=".env" -l en
+	django-admin makemessages --ignore="static" --ignore=".env" -l en

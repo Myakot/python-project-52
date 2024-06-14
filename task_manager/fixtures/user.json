@@ -1,0 +1,32 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "username": "Tallarn",
+      "first_name": "Raider",
+      "last_name": "Emprah",
+      "password": "SkullsForTheGoldenThrone"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "username": "Crowley",
+      "first_name": "Mr",
+      "last_name": "Ozzy",
+      "password": "Whattheyvedonetoyourhead?"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "username": "Akinator",
+      "first_name": "Surprise",
+      "last_name": "Djinn",
+      "password": "10293847"
+    }
+  }
+]

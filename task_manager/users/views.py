@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 
 from .models import User
-from .forms import UserForm
+from .form import UserForm
 
 
 class UsersListView(ListView):
@@ -17,7 +17,7 @@ class UsersListView(ListView):
 
 
 class UserCreateView(SuccessMessageMixin, CreateView):
-    template_name = 'users/create.html'
+    template_name = 'users/form.html'
     model = User
     form_class = UserForm
     success_url = reverse_lazy('users')
@@ -29,7 +29,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
 
 
 class UserUpdateView(SuccessMessageMixin, UpdateView):
-    template_name = 'users/create.html'  # use other template
+    template_name = 'users/form.html'  # use other template
     model = User
     form_class = UserForm
     success_url = reverse_lazy('users')

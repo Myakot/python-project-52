@@ -26,9 +26,6 @@ dev:
 start:
 	poetry run gunicorn -w 2 -b 0.0.0.0:8000 task_manager.wsgi
 
-migrate:
-	poetry run python manage.py migrate
-
 shell:
 	poetry run python manage.py shell_plus --ipython
 
@@ -37,3 +34,7 @@ compilemessages:
 
 makemessages:
 	django-admin makemessages --ignore="static" --ignore=".env" -l en
+
+migrate:
+	poetry run python manage.py makemigrations
+	poetry run python manage.py migrate

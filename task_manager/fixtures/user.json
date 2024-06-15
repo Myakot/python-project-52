@@ -3,30 +3,30 @@
     "model": "users.user",
     "pk": 1,
     "fields": {
-      "username": "Tallarn",
-      "first_name": "Raider",
-      "last_name": "Emprah",
-      "password": "SkullsForTheGoldenThrone"
+      "username": "Alice",
+      "first_name": "Bob",
+      "last_name": "Smith",
+      "password": "p@$$w0rd123"
     }
   },
   {
     "model": "users.user",
     "pk": 2,
     "fields": {
-      "username": "Crowley",
-      "first_name": "Mr",
-      "last_name": "Ozzy",
-      "password": "Whattheyvedonetoyourhead?"
+      "username": "Charlie",
+      "first_name": "David",
+      "last_name": "Brown",
+      "password": "p@$$w0rd456"
     }
   },
   {
     "model": "users.user",
     "pk": 3,
     "fields": {
-      "username": "Akinator",
-      "first_name": "Surprise",
-      "last_name": "Djinn",
-      "password": "10293847"
+      "username": "Eve",
+      "first_name": "Mallory",
+      "last_name": "Doe",
+      "password": "p@$$w0rd789"
     }
   }
 ]

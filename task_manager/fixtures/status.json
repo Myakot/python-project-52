@@ -1,0 +1,26 @@
+[
+  {
+    "model": "statuses.status",
+    "pk": 1,
+    "fields": {
+      "name": "Started",
+      "date_created": "2024-06-14T14:27:21.153Z"
+    }
+  },
+  {
+    "model": "statuses.status",
+    "pk": 2,
+    "fields": {
+      "name": "Delayed",
+      "date_created": "2024-06-14T14:58:43.452Z"
+    }
+  },
+  {
+    "model": "statuses.status",
+    "pk": 3,
+    "fields": {
+      "name": "Finished",
+      "date_created": "2024-06-14T14:49:17.053Z"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "create": {
+    "valid": {
+      "name": "Video logging"
+    },
+    "missing_fields": {
+      "name": ""
+    },
+    "exists": {
+      "name": "Education"
+    }
+  },
+  "update": {
+    "name": "Urgent"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "create": {
+    "valid": {
+      "name": "Go search for work",
+      "description": "Go and do that thing now!",
+      "executor": 2,
+      "status": 1
+    },
+    "missing_fields": {
+      "name": "",
+      "description": "",
+      "executor": "",
+      "status": ""
+    },
+    "exists": {
+      "name": "Catch zissle",
+      "description": "",
+      "executor": 2,
+      "status": 1
+    }
+  },
+  "update": {
+      "name": "This is a new name",
+      "description": "",
+      "executor": 2,
+      "status": 2
+    }
+}

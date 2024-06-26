@@ -1,60 +1,32 @@
 {
   "create": {
     "valid": {
-      "username": "Alice",
-      "first_name": "Bob",
-      "last_name": "Smith",
-      "password1": "p@$$w0rd123",
-      "password2": "p@$$w0rd123"
-    },
-    "missing_fields": {
-      "username": "Eve",
-      "first_name": "Mallory",
-      "last_name": "Doe",
-      "password1": "p@$$w0rd456",
-      "password2": "p@$$w0rd456"
+      "username": "User4",
+      "first_name": "User4_first_name",
+      "last_name": "User4_last_name",
+      "password1": "password1986",
+      "password2": "password1986"
     },
     "invalid": {
-      "username": "Charlie",
-      "first_name": "David",
-      "last_name": "Brown",
-      "password1": "p@$$w0rd789",
-      "password2": "p@$$w0rd789"
-    },
-    "exists": {
-      "username": "Grace",
-      "first_name": "Olivia",
-      "last_name": "Taylor",
-      "password1": "p@$$w0rd321",
-      "password2": "p@$$w0rd321"
-    },
-    "pass_missing": {
-      "username": "Sophie",
-      "first_name": "Emma",
-      "last_name": "Johnson",
-      "password1": "qwerty",
-      "password2": "qwerty"
-    },
-    "pass_not_match": {
-      "username": "Lily",
-      "first_name": "Ava",
-      "last_name": "Miller",
-      "password1": "p@$$w0rd999",
+      "username": "User&",
+      "first_name": "User4_first_name",
+      "last_name": "User4_last_name",
+      "password1": "password",
       "password2": "password"
     },
-    "pass_too_short": {
-      "username": "Oliver",
-      "first_name": "James",
-      "last_name": "Wilson",
-      "password1": "p",
-      "password2": "p"
+    "password_missing": {
+      "username": "User5",
+      "first_name": "User5_first_name",
+      "last_name": "User5_last_name",
+      "password1": "",
+      "password2": ""
     }
   },
   "update": {
-    "username": "First",
-    "first_name": "Stuart",
-    "last_name": "Sutcliffe",
-    "password1": "password",
-    "password2": "password"
+    "username": "User7",
+    "first_name": "User7_first_name",
+    "last_name": "User7_last_name",
+    "password1": "password2016",
+    "password2": "password2016"
   }
 }

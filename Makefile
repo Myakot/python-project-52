@@ -1,11 +1,16 @@
 install:
 	poetry install
 
+dev:
+	poetry run python manage.py runserver
+
+start:
+	poetry run gunicorn -w 2 -b 0.0.0.0:8000 task_manager.wsgi
+
 lint:
 	poetry run flake8 task_manager
 
 test:
-	#poetry run pytest --cov=task_manager
 	poetry run python3 manage.py test
 
 test-coverage:
@@ -14,20 +19,8 @@ test-coverage:
 	poetry run coverage report
 	poetry run coverage xml
 
-selfcheck:
-	poetry check
-
 check:
-	selfcheck test-coverage lint
-
-dev:
-	poetry run python manage.py runserver
-
-start:
-	poetry run gunicorn -w 2 -b 0.0.0.0:8000 task_manager.wsgi
-
-shell:
-	poetry run python manage.py shell_plus --ipython
+	poetry check
 
 compilemessages:
 	django-admin compilemessages

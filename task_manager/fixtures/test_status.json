@@ -1,16 +1,8 @@
 {
   "create": {
-    "valid": {
-      "name": "Failed"
-    },
-    "missing_fields": {
-      "name": ""
-    },
-    "exists": {
-      "name": "Started"
-    }
+      "name": "New_status"
   },
   "update": {
-    "name": "One last step!"
+    "name": "All_finished"
   }
 }

@@ -1,11 +1,7 @@
-"""
-Django settings for task_manager project.
-"""
-
 from pathlib import Path
 import os
-import dj_database_url
 from dotenv import load_dotenv
+import dj_database_url
 
 
 load_dotenv()
@@ -23,10 +19,12 @@ ALLOWED_HOSTS = [
     'webserver',
     '127.0.0.1',
     '0.0.0.0',
-    '.render.com',
-    'localhost',
+    'app.render.com'
 ]
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
@@ -37,25 +35,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap4',
-    'django_extensions',
-    'django_filters',
+    'django_bootstrap5',
     'task_manager',
-    'task_manager.users',
-    'task_manager.statuses',
-    'task_manager.tasks',
-    'task_manager.labels'
+    'task_manager.included_apps.users',
+    'task_manager.included_apps.statuses',
+    'task_manager.included_apps.tasks',
+    'task_manager.included_apps.labels',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
 
@@ -79,26 +76,25 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'task_manager.wsgi.application'
 
-
-# Database
 DATABASE_URL = os.getenv('DATABASE_URL')
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
 
-# Password validation
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600,
+    )
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.'
-                'MinimumLengthValidator',
-        'OPTIONS': {'min_length': 3, }
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 3,
+        }
     },
 ]
 
 AUTH_USER_MODEL = 'users.User'
-
-# Internationalization
 
 LANGUAGE_CODE = 'ru'
 
@@ -109,38 +105,23 @@ USE_I18N = True
 USE_TZ = True
 
 LANGUAGES = (
-    ("en", "English"),
-    ("ru", "Russian"),
+    ('en', 'English'),
+    ('ru', 'Russian')
 )
 
-LOCALE_PATHS = (
+LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
-)
-
-# Static files (CSS, JavaScript, Images)
+]
 
 STATIC_URL = 'static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-# Default primary key field type
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-FIXTURE_DIRS = ('task_manager/fixtures/',)
-
 ROLLBAR = {
-    'access_token': os.getenv('ROLLBAR_ACCESS_TOKEN'),
+    'access_token': os.getenv('ACCESS_TOKEN'),
     'environment': 'development' if DEBUG else 'production',
-    'code_version': '1.0',
     'root': BASE_DIR,
+    'patch_debugview': False,
 }
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://*.render.com',
-    'https://127.0.0.1',
-    'https://localhost',
-    'https://0.0.0.0',
-]

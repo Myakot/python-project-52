@@ -1,18 +1,11 @@
-{% extends "base.html" %}
-
-{% load bootstrap4 %}
+{% extends 'base.html' %}
 {% load i18n %}
-
-{% block title %}
-    {{ title }} | {% trans 'Task Manager' %}
-{% endblock %}
-
+{% load django_bootstrap5 %}
 {% block content %}
-    <h1 class="my-4">{{ title }}</h1>
-
+    <h2 class="my-4">{% translate 'Delete status' %}</h2>
     <form method="post">
-        <p>{% trans 'Are you sure you want to delete' %} {{ status.name }}?</p>
         {% csrf_token %}
-        {% bootstrap_button button_text button_type="submit" button_class="btn btn-danger" %}
+        <p>{% trans 'Are you sure you want to delete' %} {{ status.name }}?</p>
+        <button type="submit" class="btn btn-danger btn-sm">{% translate 'Yes, delete' %}</button>
     </form>
 {% endblock %}

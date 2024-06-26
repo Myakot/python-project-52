@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
-    <a class="navbar-brand" href="{% url 'home' %}">{% trans "Task manager" %}</a>
+    <a class="navbar-brand ms-3" href="{% url 'home' %}">{% translate "Task manager" %}</a>
 
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent">
         <span class="navbar-toggler-icon"></span>
@@ -10,34 +10,27 @@
     <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'users' %}">{% trans "Users" %}</a>
+                <a class="nav-link" href="{% url 'users_list' %}">{% translate "Users" %}</a>
             </li>
             {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'statuses' %}">{% trans "Statuses" %}</a>
+                    <a class="nav-link" href="{% url 'statuses_list' %}">{% translate "Statuses" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'labels' %}">{% trans "Labels" %}</a>
+                    <a class="nav-link" href="{% url 'labels_list' %}">{% translate "Labels" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'tasks' %}">{% trans "Tasks" %}</a>
-                </li>
-            {% endif %}
-        </ul>
-        <ul class="navbar-nav">
-            {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'user_update' user.id %}">{{ user.username }}</a>
+                    <a class="nav-link" href="{% url 'tasks_list' %}">{% translate "Tasks" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">{% trans "Log Out" %}</a>
+                    <a class="nav-link" href="{% url 'logout' %}">{% translate "Logout" %}</a>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">{% trans "Log In" %}</a>
+                    <a class="nav-link" href="{% url 'login' %}">{% translate "Login" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'sign_up' %}">{% trans "Sign Up" %}</a>
+                    <a class="nav-link" href="{% url 'user_create' %}">{% translate "Sign Up" %}</a>
                 </li>
             {% endif %}
         </ul>

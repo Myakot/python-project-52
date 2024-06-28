@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-26 23:11+0700\n"
+"POT-Creation-Date: 2024-06-28 23:34+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: task_manager/included_apps/labels/forms.py:7
 #: task_manager/included_apps/labels/models.py:6
 #: task_manager/included_apps/statuses/forms.py:9
@@ -182,7 +183,7 @@ msgstr "Добро пожаловать!"
 
 #: task_manager/templates/index.html:9
 msgid ""
-"Is an application, which allows you to set tasks, assign performers and "
+"This is an application, which allows you to set tasks, assign performers and "
 "change their statuses"
 msgstr ""
 

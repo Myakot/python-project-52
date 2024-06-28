@@ -11,13 +11,12 @@ lint:
 	poetry run flake8 task_manager
 
 test:
-	poetry run python3 manage.py test
+	poetru run ./manage.py test
 
 test-coverage:
-	#poetry run pytest --cov=task_manager --cov-report xml
-	poetry run coverage run manage.py test
-	poetry run coverage report
+	poetry run coverage run --source='.' manage.py test
 	poetry run coverage xml
+
 
 check:
 	poetry check

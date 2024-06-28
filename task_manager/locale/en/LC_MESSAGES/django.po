@@ -352,7 +352,7 @@ msgstr "Вы залогинены"
 
 #: task_manager/views.py:23 task_manager/views.py:26
 msgid "You are logged out"
-msgstr "Вы вышли из системы"
+msgstr "Вы разлогинены"
 
 #~ msgid "Sing up"
 #~ msgstr "Регистрация"

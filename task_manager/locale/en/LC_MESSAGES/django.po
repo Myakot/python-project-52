@@ -344,7 +344,7 @@ msgstr "Это поле является обязательным."
 
 #: task_manager/views.py:18
 msgid "You are logged in"
-msgstr "Вы залогинены"
+msgstr "Вы вошли в систему
 
 #: task_manager/views.py:23 task_manager/views.py:26
 msgid "You are logged out"

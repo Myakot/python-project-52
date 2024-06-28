@@ -22,9 +22,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'tasks_list' %}">{% translate "Tasks" %}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">{% translate "Logout" %}</a>
-                </li>
+                    <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link nav-link" style="display: inline; padding: 0; background: none; border: none;">{% translate "Logout" %}</button>
+                    </form>
             {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}">{% translate "Login" %}</a>

@@ -26,7 +26,7 @@ jobs:
         run: echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
       - name: Run Tests
         run: |
-          python manage.py test
+          python3 manage.py test
           
 
       - name: Run code coverage

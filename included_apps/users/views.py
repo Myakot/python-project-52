@@ -1,10 +1,10 @@
 from django.contrib.auth import get_user_model
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.included_apps.users.forms import UserForm, UpdateUserForm
+from included_apps.users.forms import UserForm, UpdateUserForm
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
+from core.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
 
 
 class UsersView(ListView):

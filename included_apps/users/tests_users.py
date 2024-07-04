@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
-from task_manager.read_json import load_data
+from core.read_json import load_data
 from django.utils.translation import gettext_lazy
 from django.core.exceptions import ObjectDoesNotExist
 

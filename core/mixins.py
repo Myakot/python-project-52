@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.utils.translation import gettext
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -13,6 +14,14 @@ class AuthenticateMixin(LoginRequiredMixin):
             return redirect(reverse_lazy('login'))
 
         return super().dispatch(request, *args, **kwargs)
+
+
+class GeneralSuccessMessageMixin(SuccessMessageMixin):
+    success_message = gettext('Operation completed successfully.')
+
+    def form_valid(self, form):
+        messages.success(self.request, self.success_message)
+        return super().form_valid(form)
 
 
 class PermissionMixin(UserPassesTestMixin):

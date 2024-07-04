@@ -1,6 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
-from task_manager.read_json import load_data
+from core.read_json import load_data
 from django.core.exceptions import ObjectDoesNotExist
 from included_apps.users.models import User
 from included_apps.labels.models import Label

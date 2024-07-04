@@ -1,6 +1,6 @@
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.mixins import AuthenticateMixin, AuthorPermissionMixin
+from core.mixins import AuthenticateMixin, AuthorPermissionMixin
 from .forms import TaskForm
 from .models import Task
 from included_apps.users.models import User

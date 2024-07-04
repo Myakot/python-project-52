@@ -4,7 +4,7 @@ from .forms import LabelForm
 from .models import Label
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from task_manager.mixins import AuthenticateMixin, DeleteProtectionMixin
+from core.mixins import AuthenticateMixin, DeleteProtectionMixin
 
 
 class LabelsView(AuthenticateMixin, ListView):

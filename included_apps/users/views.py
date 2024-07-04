@@ -4,7 +4,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from included_apps.users.forms import UserForm, UpdateUserForm
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from task_manager.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
+from core.mixins import AuthenticateMixin, PermissionMixin, DeleteProtectionMixin
 
 
 class UsersView(ListView):

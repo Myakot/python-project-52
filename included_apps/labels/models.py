@@ -1,4 +1,3 @@
-from django.db import models
 from .base_models import BaseModel
 from django.utils.translation import gettext_lazy as _
 
